@@ -2,6 +2,7 @@
 
 > [!WARNING]
 > **Pinky** is a fork of [Paru](https://github.com/Morganamilo/paru), the feature packed AUR helper. This project extends and modifies the original Paru codebase.
+> For now, Pinky is not ready to use.
 
 Feature packed AUR helper
 

@@ -70,6 +70,7 @@ jobs:
         with:
           tag_name: ${{ needs.get-version.outputs.version }}
           name: Pinky v${{ needs.get-version.outputs.version }}
+          body_path: CHANGELOG.md
           files: upload/*
           draft: true
           prerelease: false

@@ -1,13 +1,13 @@
-# paru Swedish translation.
-# Copyright (C) YEAR THE paru'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the paru package.
+# pinky Swedish translation.
+# Copyright (C) YEAR THE pinky'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the pinky package.
 # filiphe <filip@hesslund.org>, 2021.
 # Luna Jernberg <droidbittin@gmail.com>, 2022, 2023, 2024, 2026.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: paru VERSION\n"
-"Report-Msgid-Bugs-To: https://github.com/Morganamilo/paru\n"
+"Project-Id-Version: pinky VERSION\n"
+"Report-Msgid-Bugs-To: https://github.com/Morganamilo/pinky\n"
 "POT-Creation-Date: 2026-01-08 17:40+0000\n"
 "PO-Revision-Date: 2026-01-09 05:48+0000\n"
 "Last-Translator: Luna Jernberg <droidbittin@gmail.com>\n"
@@ -321,76 +321,76 @@ msgid "Usage:"
 msgstr "Användning:"
 
 #: src/help.rs:5
-msgid "    paru"
-msgstr "    paru"
+msgid "    pinky"
+msgstr "    pinky"
 
 #: src/help.rs:6
-msgid "    paru <operation> [...]"
-msgstr "    paru <operation> [...]"
+msgid "    pinky <operation> [...]"
+msgstr "    pinky <operation> [...]"
 
 #: src/help.rs:7
-msgid "    paru <package(s)>"
-msgstr "    paru <paket>"
+msgid "    pinky <package(s)>"
+msgstr "    pinky <paket>"
 
 #: src/help.rs:9
 msgid "Pacman operations:"
 msgstr "Pacman operationer:"
 
 #: src/help.rs:10
-msgid "    paru {-h --help}"
-msgstr "    paru {-h --help}"
+msgid "    pinky {-h --help}"
+msgstr "    pinky {-h --help}"
 
 #: src/help.rs:11
-msgid "    paru {-V --version}"
-msgstr "    paru {-V --version}"
+msgid "    pinky {-V --version}"
+msgstr "    pinky {-V --version}"
 
 #: src/help.rs:12
-msgid "    paru {-D --database}    <options> <package(s)>"
-msgstr "    paru {-D --database}    <alternativ> <paket>"
+msgid "    pinky {-D --database}    <options> <package(s)>"
+msgstr "    pinky {-D --database}    <alternativ> <paket>"
 
 #: src/help.rs:13
-msgid "    paru {-F --files}       [options] [package(s)]"
-msgstr "    paru {-F --files}       [alternativ] [paket]"
+msgid "    pinky {-F --files}       [options] [package(s)]"
+msgstr "    pinky {-F --files}       [alternativ] [paket]"
 
 #: src/help.rs:14
-msgid "    paru {-Q --query}       [options] [package(s)]"
-msgstr "    paru {-Q --query}       [alternativ] [paket]"
+msgid "    pinky {-Q --query}       [options] [package(s)]"
+msgstr "    pinky {-Q --query}       [alternativ] [paket]"
 
 #: src/help.rs:15
-msgid "    paru {-R --remove}      [options] <package(s)>"
-msgstr "    paru {-R --remove}      [alternativ] <paket>"
+msgid "    pinky {-R --remove}      [options] <package(s)>"
+msgstr "    pinky {-R --remove}      [alternativ] <paket>"
 
 #: src/help.rs:16
-msgid "    paru {-S --sync}        [options] [package(s)]"
-msgstr "    paru {-S --sync}        [alternativ] [paket]"
+msgid "    pinky {-S --sync}        [options] [package(s)]"
+msgstr "    pinky {-S --sync}        [alternativ] [paket]"
 
 #: src/help.rs:17
-msgid "    paru {-T --deptest}     [options] [package(s)]"
-msgstr "    paru {-T --deptest}     [alternativ] [paket]"
+msgid "    pinky {-T --deptest}     [options] [package(s)]"
+msgstr "    pinky {-T --deptest}     [alternativ] [paket]"
 
 #: src/help.rs:18
-msgid "    paru {-U --upgrade}     [options] [file(s)]"
-msgstr "    paru {-U --upgrade}     [alternativ] [filer]"
+msgid "    pinky {-U --upgrade}     [options] [file(s)]"
+msgstr "    pinky {-U --upgrade}     [alternativ] [filer]"
 
 #: src/help.rs:20
 msgid "New operations:"
 msgstr "Nya operationer:"
 
 #: src/help.rs:21
-msgid "    paru {-P --show}        [options]"
-msgstr "    paru {-P --show}        [alternativ]"
+msgid "    pinky {-P --show}        [options]"
+msgstr "    pinky {-P --show}        [alternativ]"
 
 #: src/help.rs:22
-msgid "    paru {-G --getpkgbuild} [package(s)]"
-msgstr "    paru {-G --getpkgbuild} [paket]"
+msgid "    pinky {-G --getpkgbuild} [package(s)]"
+msgstr "    pinky {-G --getpkgbuild} [paket]"
 
 #: src/help.rs:23
-msgid "    paru {-B --build}       [dir(s)]"
-msgstr "    paru {-B --build}       [katalog(er)]"
+msgid "    pinky {-B --build}       [dir(s)]"
+msgstr "    pinky {-B --build}       [katalog(er)]"
 
 #: src/help.rs:25
-msgid "If no arguments are provided 'paru -Syu' will be performed"
-msgstr "Om inga argument tillhandahålls kommer 'paru -Syu' att utföras"
+msgid "If no arguments are provided 'pinky -Syu' will be performed"
+msgstr "Om inga argument tillhandahålls kommer 'pinky -Syu' att utföras"
 
 #: src/help.rs:27
 msgid "Options without operation:"
@@ -425,8 +425,8 @@ msgid "    -a --aur               Assume targets are from the AUR"
 msgstr "    -a --aur               Anta att målen kommer från AUR"
 
 #: src/help.rs:35
-msgid "    --mode      <mode>     Sets where paru looks for targets"
-msgstr "    --mode      <mode>     Ställer in var paru letar efter mål"
+msgid "    --mode      <mode>     Sets where pinky looks for targets"
+msgstr "    --mode      <mode>     Ställer in var pinky letar efter mål"
 
 #: src/help.rs:37
 msgid ""

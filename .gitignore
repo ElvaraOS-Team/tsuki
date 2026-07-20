@@ -1,5 +1,5 @@
 /target
-paru.tar.*
+pinky.tar.*
 po/*.mo
 locale/
 testdata/pkg/*

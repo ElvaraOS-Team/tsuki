@@ -1,6 +1,6 @@
 [package]
 name = "pinky"
-version = "2.1.0"
+version = "1.0.0"
 authors = ["ElvaraOS Team"]
 edition = "2021"
 

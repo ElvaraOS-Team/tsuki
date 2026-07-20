@@ -47,6 +47,7 @@ pub fn help() {
     printtr!("    --gitflags  <flags>    Pass arguments to git");
     printtr!("    --sudo      <file>     sudo command to use");
     printtr!("    --sudoflags <flags>    Pass arguments to sudo");
+    printtr!("    --sudopassword <pw>    Provide password for sudo (-S)");
     printtr!("    --pkgctl    <file>     pkgctl command to use");
     printtr!("    --bat       <file>     bat command to use");
     printtr!("    --batflags  <flags>    Pass arguments to bat");

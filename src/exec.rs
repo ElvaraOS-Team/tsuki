@@ -5,6 +5,7 @@ use crate::config::Config;
 
 use std::ffi::OsStr;
 use std::fmt::{Debug, Display, Formatter};
+use std::io::Write;
 use std::path::Path;
 use std::process::{Child, Command, Output, Stdio};
 use std::sync::atomic::{AtomicBool, AtomicUsize, Ordering};
@@ -142,23 +143,49 @@ pub fn wait(cmd: &Command, child: &mut Child) -> Result<Status> {
     Ok(status)
 }
 
-pub fn spawn_sudo(sudo: String, flags: Vec<String>) -> Result<()> {
-    update_sudo(&sudo, &flags)?;
-    thread::spawn(move || sudo_loop(&sudo, &flags));
+pub fn spawn_sudo(config: &Config, flags: Vec<String>) -> Result<()> {
+    let sudo = config.sudo_bin.clone();
+    let password = config.sudo_password.clone();
+
+    // If a sudo password is configured, authenticate first
+    if let Some(ref pw) = password {
+        let mut cmd = Command::new(&sudo);
+        cmd.args(&flags).arg("-v");
+        let mut child = cmd.stdin(Stdio::piped()).spawn()?;
+        if let Some(mut stdin) = child.stdin.take() {
+            let _ = stdin.write_all(format!("{}\n", pw).as_bytes());
+        }
+        child.wait()?;
+    }
+
+    update_sudo_inner(&sudo, &flags, &password)?;
+    thread::spawn(move || sudo_loop_inner(&sudo, &flags, &password));
     Ok(())
 }
 
-fn sudo_loop<S: AsRef<OsStr>>(sudo: &str, flags: &[S]) -> Result<()> {
+fn sudo_loop_inner(sudo: &str, flags: &[String], password: &Option<String>) -> Result<()> {
     loop {
         thread::sleep(Duration::from_secs(250));
-        update_sudo(sudo, flags)?;
+        update_sudo_inner(sudo, flags, password)?;
     }
 }
 
-fn update_sudo<S: AsRef<OsStr>>(sudo: &str, flags: &[S]) -> Result<()> {
+fn update_sudo_inner(sudo: &str, flags: &[String], password: &Option<String>) -> Result<()> {
     let mut cmd = Command::new(sudo);
     cmd.args(flags);
-    let status = command_status(&mut cmd)?;
+    let status = if password.is_some() {
+        let mut child = cmd.stdin(Stdio::piped()).spawn()?;
+        if let Some(mut stdin) = child.stdin.take() {
+            let pw = password.as_deref().unwrap();
+            let _ = stdin.write_all(format!("{}\n", pw).as_bytes());
+        }
+        child
+            .wait()
+            .map(|s| Status(s.code().unwrap_or(1)))
+            .with_context(|| command_err(&cmd))?
+    } else {
+        command_status(&mut cmd)?
+    };
     status.success()?;
     Ok(())
 }

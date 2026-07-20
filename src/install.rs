@@ -149,7 +149,7 @@ impl Installer {
         if !config.sudo_loop.is_empty() {
             let mut flags = config.sudo_flags.clone();
             flags.extend(config.sudo_loop.clone());
-            exec::spawn_sudo(config.sudo_bin.clone(), flags)?;
+            exec::spawn_sudo(config, flags)?;
         }
         Ok(())
     }
@@ -1807,14 +1807,12 @@ pub fn review(config: &Config, fetch: &aur_fetch::Fetch, pkgs: &[&str]) -> Resul
                                     c.action.paint("::"),
                                     c.bold.paint(pkg)
                                 );
-                                let _ = pager_stdin.write_all(
-                                    diff.replace('\n', "\n    ").trim_end().as_bytes(),
-                                );
+                                let _ = pager_stdin
+                                    .write_all(diff.replace('\n', "\n    ").trim_end().as_bytes());
                                 let _ = pager_stdin.write_all(b"\n\n");
                             }
 
-                            let bat =
-                                config.color.enabled && has_command(&config.bat_bin);
+                            let bat = config.color.enabled && has_command(&config.bat_bin);
 
                             let mut buf = Vec::new();
                             for &pkg in &unseen {
@@ -1827,7 +1825,13 @@ pub fn review(config: &Config, fetch: &aur_fetch::Fetch, pkgs: &[&str]) -> Resul
                                         c.bold.paint(pkg)
                                     );
                                     print_dir(
-                                        config, &dir, &dir, &mut pager_stdin, &mut buf, bat, 1,
+                                        config,
+                                        &dir,
+                                        &dir,
+                                        &mut pager_stdin,
+                                        &mut buf,
+                                        bat,
+                                        1,
                                     )?;
                                 }
                             }

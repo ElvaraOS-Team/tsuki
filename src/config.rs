@@ -494,6 +494,7 @@ pub struct Config {
     pub git_flags: Vec<String>,
     pub gpg_flags: Vec<String>,
     pub sudo_flags: Vec<String>,
+    pub sudo_password: Option<String>,
     pub bat_flags: Vec<String>,
     pub fm_flags: Vec<String>,
     pub chroot_flags: Vec<String>,

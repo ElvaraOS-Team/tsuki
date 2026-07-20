@@ -1,10 +1,11 @@
 name: Build Release
 on:
-  push:
-    tags:
-      - v*
-    branches:
-       - test-release/*
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Release version (e.g. 1.0.0)'
+        required: true
+        type: string
 
 jobs:
   get-version:
@@ -13,9 +14,7 @@ jobs:
       version: ${{ steps.version.outputs.version }}
     steps:
       - id: version
-        run: echo "version=${ref##test-release/}" >> $GITHUB_OUTPUT
-        env:
-          ref: ${{ github.ref_name }}
+        run: echo "version=${{ inputs.version }}" >> $GITHUB_OUTPUT
 
   build-releases:
     name: Build release
@@ -68,7 +67,7 @@ jobs:
       - name: Create Release and Upload Assets
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ needs.get-version.outputs.version }}
+          tag_name: v${{ needs.get-version.outputs.version }}
           name: Pinky v${{ needs.get-version.outputs.version }}
           body_path: CHANGELOG.md
           files: upload/*

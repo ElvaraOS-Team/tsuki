@@ -959,9 +959,17 @@ msgstr "未能打开：{}"
 msgid "binary file: {}"
 msgstr "二进制文件：{}"
 
+#: src/install.rs:1732
+msgid "failed to run opencode"
+msgstr "运行 opencode 失败"
+
 #: src/install.rs:1719 src/install.rs:1790
 msgid "Accept changes?"
 msgstr "接受更改？"
+
+#: src/install.rs:1745
+msgid "[Y/n/v]:"
+msgstr "[Y/n/v(查看)]:"
 
 #: src/install.rs:1759
 msgid "Paging with less. Press 'q' to quit or 'h' for help."

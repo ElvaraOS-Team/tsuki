@@ -911,8 +911,16 @@ msgstr ""
 msgid "binary file: {}"
 msgstr ""
 
+#: src/install.rs:1732
+msgid "failed to run opencode"
+msgstr ""
+
 #: src/install.rs:1719 src/install.rs:1790
 msgid "Accept changes?"
+msgstr ""
+
+#: src/install.rs:1745
+msgid "[Y/n/v]:"
 msgstr ""
 
 #: src/install.rs:1759

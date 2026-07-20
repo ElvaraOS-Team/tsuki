@@ -1712,8 +1712,140 @@ pub fn review(config: &Config, fetch: &aur_fetch::Fetch, pkgs: &[&str]) -> Resul
     if pkgs.is_empty() {
         return Ok(());
     }
+
+    let has_opencode = has_command("opencode");
+
     if !config.no_confirm {
-        if let Some(ref fm) = config.fm {
+        if has_opencode {
+            for &pkg in pkgs {
+                let dir = fetch.clone_dir.join(pkg);
+                if dir.exists() {
+                    let _ = writeln!(
+                        std::io::stdout(),
+                        "{} {}:",
+                        c.action.paint("::"),
+                        c.bold.paint(pkg)
+                    );
+                    let output = Command::new("opencode")
+                        .current_dir(&dir)
+                        .output()
+                        .with_context(|| tr!("failed to run opencode"))?;
+                    std::io::stdout().write_all(&output.stdout)?;
+                    if !output.status.success() {
+                        std::io::stderr().write_all(&output.stderr)?;
+                    }
+                }
+            }
+
+            loop {
+                print!(
+                    "{} {} {}",
+                    c.action.paint("::"),
+                    c.bold.paint(tr!("Accept changes?")),
+                    c.bold.paint(tr!("[Y/n/v]:"))
+                );
+                let _ = std::io::stdout().lock().flush();
+                if config.no_confirm {
+                    println!();
+                    break;
+                }
+                let stdin = std::io::stdin();
+                let mut input = String::new();
+                let _ = stdin.read_line(&mut input);
+                let input = input.trim().to_lowercase();
+
+                if input == tr!("y") || input == tr!("yes") || input.is_empty() {
+                    break;
+                } else if input == "v" || input == tr!("view") {
+                    if let Some(ref fm) = config.fm {
+                        let _view = file_manager(config, fetch, fm, pkgs)?;
+                    } else {
+                        let unseen = fetch.unseen(pkgs)?;
+                        let has_diff = fetch.has_diff(&unseen)?;
+                        let printed =
+                            !has_diff.is_empty() || unseen.iter().any(|p| !has_diff.contains(p));
+                        let diffs = fetch.diff(&has_diff, config.color.enabled)?;
+
+                        if printed {
+                            let pager_unconfigured =
+                                var("PINKY_PAGER").is_err() && var("PAGER").is_err();
+                            let pager = if has_command("less") { "less" } else { "cat" };
+
+                            let pager = config
+                                .pager_cmd
+                                .clone()
+                                .or_else(|| var("PINKY_PAGER").ok())
+                                .or_else(|| var("PAGER").ok())
+                                .unwrap_or_else(|| pager.to_string());
+
+                            exec::RAISE_SIGPIPE.store(false, Ordering::Relaxed);
+                            let mut command = Command::new("sh");
+
+                            if std::env::var("LESS").is_err() {
+                                command.env("LESS", "SRXF");
+                            }
+                            command.arg("-c").arg(&pager).stdin(Stdio::piped());
+                            let mut child = exec::spawn(&mut command)?;
+
+                            let mut pager_stdin = child.stdin.take().unwrap();
+
+                            if pager_unconfigured && pager == "less" {
+                                let _ = write!(
+                                    pager_stdin,
+                                    "{}",
+                                    c.bold.paint(tr!(
+                                        "Paging with less. Press 'q' to quit or 'h' for help."
+                                    ))
+                                );
+                                let _ = pager_stdin.write_all(b"\n\n");
+                            }
+
+                            for (&pkg, diff) in has_diff.iter().zip(diffs) {
+                                let _ = write!(
+                                    pager_stdin,
+                                    "{} {}:\n    ",
+                                    c.action.paint("::"),
+                                    c.bold.paint(pkg)
+                                );
+                                let _ = pager_stdin.write_all(
+                                    diff.replace('\n', "\n    ").trim_end().as_bytes(),
+                                );
+                                let _ = pager_stdin.write_all(b"\n\n");
+                            }
+
+                            let bat =
+                                config.color.enabled && has_command(&config.bat_bin);
+
+                            let mut buf = Vec::new();
+                            for &pkg in &unseen {
+                                if !has_diff.contains(&pkg) {
+                                    let dir = fetch.clone_dir.join(pkg);
+                                    let _ = writeln!(
+                                        pager_stdin,
+                                        "{} {}:",
+                                        c.action.paint("::"),
+                                        c.bold.paint(pkg)
+                                    );
+                                    print_dir(
+                                        config, &dir, &dir, &mut pager_stdin, &mut buf, bat, 1,
+                                    )?;
+                                }
+                            }
+
+                            drop(pager_stdin);
+                            exec::wait(&command, &mut child)?;
+                            exec::RAISE_SIGPIPE.store(true, Ordering::Relaxed);
+                        }
+                    }
+                } else {
+                    return Status::err(1);
+                }
+            }
+
+            if config.save_changes {
+                fetch.commit(pkgs, "pinky save changes")?;
+            }
+        } else if let Some(ref fm) = config.fm {
             let _view = file_manager(config, fetch, fm, pkgs)?;
 
             if !ask(config, &tr!("Accept changes?"), true) {

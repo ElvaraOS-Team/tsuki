@@ -10,14 +10,16 @@ Feature packed AUR helper
 
 Pinky is your standard pacman wrapping AUR helper with lots of features and minimal interaction.
 
-<!-- ## Installation
+## Installation
+
+For now, Pinky is not ready to use.
 
 ```
 sudo pacman -S --needed base-devel
 git clone https://aur.archlinux.org/pinky.git
 cd pinky
 makepkg -si
-``` -->
+```
 
 ## Contributing
 

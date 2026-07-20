@@ -1,5 +1,7 @@
 # Pinky
 
+[Readme in English](./README.md) | [中文文档](./README_zh.md)
+
 > [!WARNING]
 > **Pinky** is a fork of [Paru](https://github.com/Morganamilo/paru), the feature packed AUR helper. This project extends and modifies the original Paru codebase.
 > For now, Pinky is not ready to use.
@@ -9,6 +11,13 @@ Feature packed AUR helper
 ## Description
 
 Pinky is your standard pacman wrapping AUR helper with lots of features and minimal interaction.
+
+## Features
+
+Pinky adds some features that are (probably) not planned in the official version:
+
+- If opencode exists on the system, Pinky will invoke opencode to review PKGBUILD
+- `--sudopassword <password>` allows specifying the password via the `-S` flag when invoking sudo. **This feature is designed for automated scripts; do not use it unless necessary**
 
 ## Installation
 

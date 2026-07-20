@@ -3,7 +3,7 @@ set -e
 
 xtr \
 	-d pinky \
-	--msgid-bugs-address https://github.com/Morganamilo/pinky \
+	--msgid-bugs-address https://github.com/ElvaraOS-Team/pinky \
 	--package-name=pinky\
 	--package-version="$(awk -F '=' '/^version/ {print $2}' Cargo.toml | sed 's/\"//g')" \
 	-k printtr -k tr \

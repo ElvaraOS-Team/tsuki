@@ -1,12 +1,12 @@
 [package]
 name = "pinky"
 version = "2.1.0"
-authors = ["morganamilo <morganamilo@archlinux.org>"]
+authors = ["ElvaraOS Team"]
 edition = "2021"
 
 description = "Feature packed AUR helper"
-homepage = "https://github.com/Morganamilo/pinky"
-repository = "https://github.com/Morganamilo/pinky"
+homepage = "https://github.com/ElvaraOS-Team/pinky"
+repository = "https://github.com/ElvaraOS-Team/pinky"
 documentation = "https://docs.rs/pinky"
 license = "GPL-3.0"
 keywords = ["archlinux", "arch", "alpm", "pacman", "aur"]

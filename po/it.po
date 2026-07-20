@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: pinky 1.7.3\n"
-"Report-Msgid-Bugs-To: https://github.com/Morganamilo/pinky\n"
+"Report-Msgid-Bugs-To: https://github.com/ElvaraOS-Team/pinky\n"
 "POT-Creation-Date: 2026-01-08 17:40+0000\n"
 "PO-Revision-Date: 2021-06-28 19:00+0000\n"
 "Last-Translator: Francesco Minnocci <ascoli dot minnocci at gmail dot com>\n"

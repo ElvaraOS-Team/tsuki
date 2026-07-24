@@ -66,14 +66,29 @@ jobs:
             cp "$dir/pinky.tar.zst" "upload/pinky-${version}-${suffix}.tar.zst"
           done
 
+      - name: Generate release body from changelog
+        run: |
+          version="${{ needs.get-version.outputs.version }}"
+          awk -v ver="v${version}" '
+            /^## / {
+              if ($0 ~ ver) {
+                found=1
+                print
+                next
+              }
+              if (found) exit
+            }
+            found { print }
+          ' CHANGELOG.md > release_body.md
+
       - name: Create Release and Upload Assets
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v${{ needs.get-version.outputs.version }}
           name: Pinky v${{ needs.get-version.outputs.version }}
-          body_path: CHANGELOG.md
+          body_path: release_body.md
           files: upload/*
-          draft: true
+          draft: false
           prerelease: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

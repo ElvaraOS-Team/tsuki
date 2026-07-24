@@ -1,11 +1,11 @@
-# Copyright (C) YEAR THE pinky'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the pinky package.
+# Copyright (C) YEAR THE tsuki'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the tsuki package.
 #
 # SPDX-FileCopyrightText: 2021, 2022, 2023 Jeff Huang <s8321414@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: pinky VERSION\n"
-"Report-Msgid-Bugs-To: https://github.com/ElvaraOS-Team/pinky\n"
+"Project-Id-Version: tsuki VERSION\n"
+"Report-Msgid-Bugs-To: https://github.com/ElvaraOS-Team/tsuki\n"
 "POT-Creation-Date: 2026-01-08 17:40+0000\n"
 "PO-Revision-Date: 2023-12-17 22:06+0800\n"
 "Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
@@ -322,76 +322,76 @@ msgid "Usage:"
 msgstr "用法："
 
 #: src/help.rs:5
-msgid "    pinky"
-msgstr "    pinky"
+msgid "    tsuki"
+msgstr "    tsuki"
 
 #: src/help.rs:6
-msgid "    pinky <operation> [...]"
-msgstr "    pinky <動作> [...]"
+msgid "    tsuki <operation> [...]"
+msgstr "    tsuki <動作> [...]"
 
 #: src/help.rs:7
-msgid "    pinky <package(s)>"
-msgstr "    pinky <軟體包>"
+msgid "    tsuki <package(s)>"
+msgstr "    tsuki <軟體包>"
 
 #: src/help.rs:9
 msgid "Pacman operations:"
 msgstr "Pacman 動作："
 
 #: src/help.rs:10
-msgid "    pinky {-h --help}"
-msgstr "    pinky {-h --help}"
+msgid "    tsuki {-h --help}"
+msgstr "    tsuki {-h --help}"
 
 #: src/help.rs:11
-msgid "    pinky {-V --version}"
-msgstr "    pinky {-V --version}"
+msgid "    tsuki {-V --version}"
+msgstr "    tsuki {-V --version}"
 
 #: src/help.rs:12
-msgid "    pinky {-D --database}    <options> <package(s)>"
-msgstr "    pinky {-D --database}    <選項> <軟體包>"
+msgid "    tsuki {-D --database}    <options> <package(s)>"
+msgstr "    tsuki {-D --database}    <選項> <軟體包>"
 
 #: src/help.rs:13
-msgid "    pinky {-F --files}       [options] [package(s)]"
-msgstr "    pinky {-F --files}       [選項] [軟體包]"
+msgid "    tsuki {-F --files}       [options] [package(s)]"
+msgstr "    tsuki {-F --files}       [選項] [軟體包]"
 
 #: src/help.rs:14
-msgid "    pinky {-Q --query}       [options] [package(s)]"
-msgstr "    pinky {-Q --query}       [選項] [軟體包]"
+msgid "    tsuki {-Q --query}       [options] [package(s)]"
+msgstr "    tsuki {-Q --query}       [選項] [軟體包]"
 
 #: src/help.rs:15
-msgid "    pinky {-R --remove}      [options] <package(s)>"
-msgstr "    pinky {-R --remove}      [選項] <軟體包>"
+msgid "    tsuki {-R --remove}      [options] <package(s)>"
+msgstr "    tsuki {-R --remove}      [選項] <軟體包>"
 
 #: src/help.rs:16
-msgid "    pinky {-S --sync}        [options] [package(s)]"
-msgstr "    pinky {-S --sync}        [選項] [軟體包]"
+msgid "    tsuki {-S --sync}        [options] [package(s)]"
+msgstr "    tsuki {-S --sync}        [選項] [軟體包]"
 
 #: src/help.rs:17
-msgid "    pinky {-T --deptest}     [options] [package(s)]"
-msgstr "    pinky {-T --deptest}     [選項] [軟體包]"
+msgid "    tsuki {-T --deptest}     [options] [package(s)]"
+msgstr "    tsuki {-T --deptest}     [選項] [軟體包]"
 
 #: src/help.rs:18
-msgid "    pinky {-U --upgrade}     [options] [file(s)]"
-msgstr "    pinky {-U --upgrade}     [選項] [檔案]"
+msgid "    tsuki {-U --upgrade}     [options] [file(s)]"
+msgstr "    tsuki {-U --upgrade}     [選項] [檔案]"
 
 #: src/help.rs:20
 msgid "New operations:"
 msgstr "新動作："
 
 #: src/help.rs:21
-msgid "    pinky {-P --show}        [options]"
-msgstr "    pinky {-P --show}        [選項]"
+msgid "    tsuki {-P --show}        [options]"
+msgstr "    tsuki {-P --show}        [選項]"
 
 #: src/help.rs:22
-msgid "    pinky {-G --getpkgbuild} [package(s)]"
-msgstr "    pinky {-G --getpkgbuild} [軟體包]"
+msgid "    tsuki {-G --getpkgbuild} [package(s)]"
+msgstr "    tsuki {-G --getpkgbuild} [軟體包]"
 
 #: src/help.rs:23
-msgid "    pinky {-B --build}       [dir(s)]"
-msgstr "    pinky {-B --build}       [目錄]"
+msgid "    tsuki {-B --build}       [dir(s)]"
+msgstr "    tsuki {-B --build}       [目錄]"
 
 #: src/help.rs:25
-msgid "If no arguments are provided 'pinky -Syu' will be performed"
-msgstr "若未提供參數，則會執行「pinky -Syu」"
+msgid "If no arguments are provided 'tsuki -Syu' will be performed"
+msgstr "若未提供參數，則會執行「tsuki -Syu」"
 
 #: src/help.rs:27
 msgid "Options without operation:"
@@ -424,8 +424,8 @@ msgid "    -a --aur               Assume targets are from the AUR"
 msgstr "    -a --aur               假設目標來自 AUR"
 
 #: src/help.rs:35
-msgid "    --mode      <mode>     Sets where pinky looks for targets"
-msgstr "    --mode      <mode>     設定 pinky 尋找目標的位置"
+msgid "    --mode      <mode>     Sets where tsuki looks for targets"
+msgstr "    --mode      <mode>     設定 tsuki 尋找目標的位置"
 
 #: src/help.rs:37
 msgid ""

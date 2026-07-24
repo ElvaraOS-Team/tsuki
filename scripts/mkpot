@@ -2,10 +2,10 @@
 set -e
 
 xtr \
-	-d pinky \
-	--msgid-bugs-address https://github.com/ElvaraOS-Team/pinky \
-	--package-name=pinky\
+	-d tsuki \
+	--msgid-bugs-address https://github.com/ElvaraOS-Team/tsuki \
+	--package-name=tsuki\
 	--package-version="$(awk -F '=' '/^version/ {print $2}' Cargo.toml | sed 's/\"//g')" \
 	-k printtr -k tr \
-	-o=po/pinky.pot \
+	-o=po/tsuki.pot \
 	src/lib.rs

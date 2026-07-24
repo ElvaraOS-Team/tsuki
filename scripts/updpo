@@ -2,5 +2,5 @@
 set -e
 
 for po in po/*.po; do
-	msgmerge "$po" "po/pinky.pot" -o "$po"
+	msgmerge "$po" "po/tsuki.pot" -o "$po"
 done

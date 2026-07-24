@@ -1768,13 +1768,13 @@ pub fn review(config: &Config, fetch: &aur_fetch::Fetch, pkgs: &[&str]) -> Resul
 
                         if printed {
                             let pager_unconfigured =
-                                var("PINKY_PAGER").is_err() && var("PAGER").is_err();
+                                var("TSUKI_PAGER").is_err() && var("PAGER").is_err();
                             let pager = if has_command("less") { "less" } else { "cat" };
 
                             let pager = config
                                 .pager_cmd
                                 .clone()
-                                .or_else(|| var("PINKY_PAGER").ok())
+                                .or_else(|| var("TSUKI_PAGER").ok())
                                 .or_else(|| var("PAGER").ok())
                                 .unwrap_or_else(|| pager.to_string());
 
@@ -1847,7 +1847,7 @@ pub fn review(config: &Config, fetch: &aur_fetch::Fetch, pkgs: &[&str]) -> Resul
             }
 
             if config.save_changes {
-                fetch.commit(pkgs, "pinky save changes")?;
+                fetch.commit(pkgs, "tsuki save changes")?;
             }
         } else if let Some(ref fm) = config.fm {
             let _view = file_manager(config, fetch, fm, pkgs)?;
@@ -1857,7 +1857,7 @@ pub fn review(config: &Config, fetch: &aur_fetch::Fetch, pkgs: &[&str]) -> Resul
             }
 
             if config.save_changes {
-                fetch.commit(pkgs, "pinky save changes")?;
+                fetch.commit(pkgs, "tsuki save changes")?;
             }
         } else {
             let unseen = fetch.unseen(pkgs)?;
@@ -1866,13 +1866,13 @@ pub fn review(config: &Config, fetch: &aur_fetch::Fetch, pkgs: &[&str]) -> Resul
             let diffs = fetch.diff(&has_diff, config.color.enabled)?;
 
             if printed {
-                let pager_unconfigured = var("PINKY_PAGER").is_err() && var("PAGER").is_err();
+                let pager_unconfigured = var("TSUKI_PAGER").is_err() && var("PAGER").is_err();
                 let pager = if has_command("less") { "less" } else { "cat" };
 
                 let pager = config
                     .pager_cmd
                     .clone()
-                    .or_else(|| var("PINKY_PAGER").ok())
+                    .or_else(|| var("TSUKI_PAGER").ok())
                     .or_else(|| var("PAGER").ok())
                     .unwrap_or_else(|| pager.to_string());
 

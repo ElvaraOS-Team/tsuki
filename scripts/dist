@@ -3,7 +3,7 @@ set -e
 
 cargo build --release --features generate --locked --target-dir target
 scripts/mkmo locale/
-strip target/release/pinky
+strip target/release/tsuki
 
-tar --zstd -cf pinky.tar.zst man completions pinky.conf locale -C target/release pinky
+tar --zstd -cf tsuki.tar.zst man completions tsuki.conf locale -C target/release tsuki
 

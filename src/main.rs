@@ -1,4 +1,4 @@
-use pinky::run;
+use tsuki::run;
 use std::process::exit;
 
 #[tokio::main]

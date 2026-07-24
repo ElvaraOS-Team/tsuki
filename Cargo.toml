@@ -1,13 +1,13 @@
 [package]
-name = "pinky"
+name = "tsuki"
 version = "1.0.0"
 authors = ["ElvaraOS Team"]
 edition = "2021"
 
 description = "Feature packed AUR helper"
-homepage = "https://github.com/ElvaraOS-Team/pinky"
-repository = "https://github.com/ElvaraOS-Team/pinky"
-documentation = "https://docs.rs/pinky"
+homepage = "https://github.com/ElvaraOS-Team/tsuki"
+repository = "https://github.com/ElvaraOS-Team/tsuki"
+documentation = "https://docs.rs/tsuki"
 license = "GPL-3.0"
 keywords = ["archlinux", "arch", "alpm", "pacman", "aur"]
 include = ["src/**/*", "LICENSE", "README.md", "CHANGELOG.md", "help"]

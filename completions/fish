@@ -1,18 +1,18 @@
 # vim:fdm=marker foldlevel=0 tabstop=2 shiftwidth=2 filetype=fish
 # Original Author for pacman: Giorgio Lando <patroclo7@gmail.com>
-# Updated for pinky by jguer
+# Updated for tsuki by jguer
 
-set -l progname pinky
+set -l progname tsuki
 
-function __fish_print_pinky_repos --description "Print the repositories configured for pinky"
+function __fish_print_tsuki_repos --description "Print the repositories configured for tsuki"
     string match -er "\[.*\]" </etc/pacman.conf | string match -r -v "^#|options" | string replace -ra "\[|\]" ""
-    pinky -Sl --pkgbuilds | cut -d ' ' -f1 | uniq
+    tsuki -Sl --pkgbuilds | cut -d ' ' -f1 | uniq
 end
 
 
-# pinky constants
+# tsuki constants
 set -l noopt 'not __fish_contains_opt -s G -s V -s P -s S -s D -s Q -s R -s U -s T -s F -s L -s C database query sync remove upgrade deptest files version repoctl chrootctl gendb'
-set -l listall "(pinky -Pc | string replace ' ' \t)"
+set -l listall "(tsuki -Pc | string replace ' ' \t)"
 set -l listpacman "(__fish_print_pacman_packages)"
 set -l show '__fish_contains_opt -s P show'
 set -l getpkgbuild '__fish_contains_opt -s G getpkgbuild'
@@ -21,7 +21,7 @@ set -l chrootctl '__fish_contains_opt -s C chrootctl'
 
 # Pacman constants
 set -l listinstalled "(pacman -Q | string replace ' ' \t)"
-set -l listrepos "(__fish_print_pinky_repos)"
+set -l listrepos "(__fish_print_tsuki_repos)"
 set -l listgroups "(pacman -Sg)\t'Package Group'"
 set -l database '__fish_contains_opt -s D database'
 set -l query '__fish_contains_opt -s Q query'
@@ -158,14 +158,14 @@ complete -c $progname -n "$upgrade" -xa '(__fish_complete_suffix pkg.tar.zst; __
 
 complete -c $progname -n "$upgrade" -s i -l install -d 'Install package as well as building' -f
 
-# pinky operations
+# tsuki operations
 complete -c $progname -s P -f -l show -n "$noopt" -d 'Print information'
 complete -c $progname -s G -f -l getpkgbuild -n "$noopt" -d 'Get PKGBUILD from ABS or AUR'
 complete -c $progname -s L -f -l repoctl -n "$noopt" -d 'List local repos'
 complete -c $progname -s C -f -l chrootctl -n "$noopt" -d 'Interactive shell to the chroot'
 
 
-# pinky options
+# tsuki options
 complete -c $progname -s c -l clean -n "$noopt" -d 'Remove unneeded dependencies' -f
 complete -c $progname -l gendb -n "$noopt" -d 'Generate development package DB' -f
 
@@ -182,7 +182,7 @@ complete -c $progname -n "$getpkgbuild" -xa "$listall"
 # Repoctl options
 complete -c $progname -n "$repoctl" -s l -l list -d 'List packages in local repos' -f
 complete -c $progname -n "$repoctl" -s d -l delete -d 'Remove a package from the local repo' -f
-complete -c $progname -n "$repoctl; and __fish_contains_opt -s d delete" -d 'Package in local repo' -xa '(pinky --repoctl --list --quiet)'
+complete -c $progname -n "$repoctl; and __fish_contains_opt -s d delete" -d 'Package in local repo' -xa '(tsuki --repoctl --list --quiet)'
 complete -c $progname -n "$repoctl" -s q -l quiet -d 'Show less information' -f
 complete -c $progname -n "$repoctl" -s y -l refresh -d 'Refresh local repos' -f
 complete -c $progname -n "$repoctl" -s c -l clean -d 'Remove uninstalled packages from repos' -f

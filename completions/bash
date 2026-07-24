@@ -39,16 +39,16 @@ _pacman_pkg() {
   )"
 }
 
-_pinky_pkg() {
+_tsuki_pkg() {
   [ -z "$cur" ] && _pacman_pkg Slq && return
-  _arch_compgen "$(pinky -Pc)"
+  _arch_compgen "$(tsuki -Pc)"
 }
 
 _pacman_repo_list() {
-  _arch_compgen "$(pacman-conf --repo-list)"$'\n'"$(pinky -Sl --pkgbuilds | cut -d ' ' -f1 | uniq)"
+  _arch_compgen "$(pacman-conf --repo-list)"$'\n'"$(tsuki -Sl --pkgbuilds | cut -d ' ' -f1 | uniq)"
 }
 
-_pinky() {
+_tsuki() {
   compopt -o default
   local common core cur database files prev query remove sync upgrade o
   local show getpkgbuild
@@ -113,13 +113,13 @@ _pinky() {
         { _arch_incomp 'g groups' && _pacman_pkg Sg; } ||
           { _arch_incomp 'l list' && _pacman_repo_list; } ||
           { _arch_incomp 's search' && compopt +o default; } ||
-          _pinky_pkg
+          _tsuki_pkg
         ;;
       U)
         _pacman_file
         ;;
       G)
-        _pinky_pkg
+        _tsuki_pkg
         ;;
       esac
   fi
@@ -131,6 +131,6 @@ _pacman_file() {
   _filedir 'pkg.tar*'
 }
 
-complete -F _pinky pinky
+complete -F _tsuki tsuki
 
 # ex:et ts=2 sw=2 ft=sh

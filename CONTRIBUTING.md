@@ -1,4 +1,4 @@
-# Contributing to pinky
+# Contributing to tsuki
 
 ## Formatting
 
@@ -6,21 +6,21 @@ Please format the code using `cargo fmt`
 
 ## Building
 
-Pinky is built with cargo.
+Tsuki is built with cargo.
 
-To build pinky use:
+To build tsuki use:
 
 ```
 cargo build
 ```
 
-To run pinky use:
+To run tsuki use:
 
 ```
 cargo run -- <args>
 ```
 
-Pinky has a couple of feature flags which you may want to enable:
+Tsuki has a couple of feature flags which you may want to enable:
 
 - backtrace: does nothing, kept around for backwards compatibility
 - git: target the libalpm-git API
@@ -33,7 +33,7 @@ feature. Then running with **LD_LIBRARY_PATH** pointed at the custom libalpm.so.
 
 ## Testing
 
-Pinky's test suite can be run by running:
+Tsuki's test suite can be run by running:
 
 ```
 cargo test --features mock
@@ -50,13 +50,13 @@ When translating to a new language try to stick to languages pacman already supp
 https://gitlab.archlinux.org/pacman/pacman/-/tree/master/src/pacman/po. For example using
 `es` over `es_ES`.
 
-To translate pinky to a new language, copy the the template .pot file to the locale you
+To translate tsuki to a new language, copy the the template .pot file to the locale you
 are translating to.
 
-For example, to translate pinky to Japanese you would do:
+For example, to translate tsuki to Japanese you would do:
 
 ```
-cp po/pinky.pot po/jp.po
+cp po/tsuki.pot po/jp.po
 ```
 
 Then fill out the template file with your information and translation.
@@ -79,7 +79,7 @@ Then fill in new strings.
 
 ### Testing Translations
 
-To test the translations you first must build the translation then run pinky
+To test the translations you first must build the translation then run tsuki
 pointing it at the generated files.
 
 ```

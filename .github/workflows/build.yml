@@ -41,8 +41,8 @@ jobs:
       - run: docker build --platform=linux/${{ matrix.platform.docker }} -o . .
       - uses: actions/upload-artifact@v4
         with:
-          name: pinky-${{ matrix.platform.arch }}
-          path: pinky.tar.zst
+          name: tsuki-${{ matrix.platform.arch }}
+          path: tsuki.tar.zst
 
   release:
     name: Create GitHub Release and Upload Binaries
@@ -62,8 +62,8 @@ jobs:
           mkdir -p upload
           for dir in artifacts/*/; do
             arch="$(basename "$dir")"
-            suffix="${arch#pinky-}"
-            cp "$dir/pinky.tar.zst" "upload/pinky-${version}-${suffix}.tar.zst"
+            suffix="${arch#tsuki-}"
+            cp "$dir/tsuki.tar.zst" "upload/tsuki-${version}-${suffix}.tar.zst"
           done
 
       - name: Generate release body from changelog
@@ -85,7 +85,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v${{ needs.get-version.outputs.version }}
-          name: Pinky v${{ needs.get-version.outputs.version }}
+          name: Tsuki v${{ needs.get-version.outputs.version }}
           body_path: release_body.md
           files: upload/*
           draft: false

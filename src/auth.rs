@@ -43,8 +43,8 @@ impl LazyPipe {
 }
 
 pub fn spawn_auth(config: &Config) -> Result<Pipe> {
-    let (pinky_read, auth_write) = pipe()?;
-    let (auth_read, pinky_write) = pipe()?;
+    let (tsuki_read, auth_write) = pipe()?;
+    let (auth_read, tsuki_write) = pipe()?;
 
 
     /*Command::new(&config.sudo_bin)
@@ -62,8 +62,8 @@ pub fn spawn_auth(config: &Config) -> Result<Pipe> {
 
     loop {}
 
-    let read = unsafe { File::from_raw_fd(pinky_read) };
-    let write = unsafe { File::from_raw_fd(pinky_write) };
+    let read = unsafe { File::from_raw_fd(tsuki_read) };
+    let write = unsafe { File::from_raw_fd(tsuki_write) };
 
     let mut pipe = Pipe { read, write };
 

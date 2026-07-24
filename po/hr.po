@@ -1,13 +1,13 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE pinky'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the pinky package.
+# Copyright (C) YEAR THE tsuki'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the tsuki package.
 # Ivan Merčep <i1mercep@gmail.com>, 2021.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: pinky VERSION\n"
-"Report-Msgid-Bugs-To: https://github.com/ElvaraOS-Team/pinky\n"
+"Project-Id-Version: tsuki VERSION\n"
+"Report-Msgid-Bugs-To: https://github.com/ElvaraOS-Team/tsuki\n"
 "POT-Creation-Date: 2026-01-08 17:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Ivan Merčep <i1mercep@gmail.com>\n"
@@ -336,77 +336,77 @@ msgid "Usage:"
 msgstr "Korištenje:"
 
 #: src/help.rs:5
-msgid "    pinky"
-msgstr "    pinky"
+msgid "    tsuki"
+msgstr "    tsuki"
 
 #: src/help.rs:6
-msgid "    pinky <operation> [...]"
-msgstr "    pinky <operacija> [...]"
+msgid "    tsuki <operation> [...]"
+msgstr "    tsuki <operacija> [...]"
 
 #: src/help.rs:7
-msgid "    pinky <package(s)>"
-msgstr "    pinky <paket(i)>"
+msgid "    tsuki <package(s)>"
+msgstr "    tsuki <paket(i)>"
 
 #: src/help.rs:9
 msgid "Pacman operations:"
 msgstr "Pacman operacije:"
 
 #: src/help.rs:10
-msgid "    pinky {-h --help}"
-msgstr "    pinky {-h --help}"
+msgid "    tsuki {-h --help}"
+msgstr "    tsuki {-h --help}"
 
 #: src/help.rs:11
-msgid "    pinky {-V --version}"
-msgstr "    pinky {-V --version}"
+msgid "    tsuki {-V --version}"
+msgstr "    tsuki {-V --version}"
 
 #: src/help.rs:12
-msgid "    pinky {-D --database}    <options> <package(s)>"
-msgstr "    pinky {-D --database}    <opcije> <paket(i)>"
+msgid "    tsuki {-D --database}    <options> <package(s)>"
+msgstr "    tsuki {-D --database}    <opcije> <paket(i)>"
 
 #: src/help.rs:13
-msgid "    pinky {-F --files}       [options] [package(s)]"
-msgstr "    pinky {-F --files}       [opcije] [paket(i)]"
+msgid "    tsuki {-F --files}       [options] [package(s)]"
+msgstr "    tsuki {-F --files}       [opcije] [paket(i)]"
 
 #: src/help.rs:14
-msgid "    pinky {-Q --query}       [options] [package(s)]"
-msgstr "    pinky {-Q --query}       [opcije] [paket(i)]"
+msgid "    tsuki {-Q --query}       [options] [package(s)]"
+msgstr "    tsuki {-Q --query}       [opcije] [paket(i)]"
 
 #: src/help.rs:15
-msgid "    pinky {-R --remove}      [options] <package(s)>"
-msgstr "    pinky {-R --remove}      [opcije] <paket(i)>"
+msgid "    tsuki {-R --remove}      [options] <package(s)>"
+msgstr "    tsuki {-R --remove}      [opcije] <paket(i)>"
 
 #: src/help.rs:16
-msgid "    pinky {-S --sync}        [options] [package(s)]"
-msgstr "    pinky {-S --sync}        [opcije] [paket(i)]"
+msgid "    tsuki {-S --sync}        [options] [package(s)]"
+msgstr "    tsuki {-S --sync}        [opcije] [paket(i)]"
 
 #: src/help.rs:17
-msgid "    pinky {-T --deptest}     [options] [package(s)]"
-msgstr "    pinky {-T --deptest}     [opcije] [paket(i)]"
+msgid "    tsuki {-T --deptest}     [options] [package(s)]"
+msgstr "    tsuki {-T --deptest}     [opcije] [paket(i)]"
 
 #: src/help.rs:18
-msgid "    pinky {-U --upgrade}     [options] [file(s)]"
-msgstr "    pinky {-U --upgrade}     [opcije] [datoteke]"
+msgid "    tsuki {-U --upgrade}     [options] [file(s)]"
+msgstr "    tsuki {-U --upgrade}     [opcije] [datoteke]"
 
 #: src/help.rs:20
 msgid "New operations:"
 msgstr "Nove operacije:"
 
 #: src/help.rs:21
-msgid "    pinky {-P --show}        [options]"
-msgstr "    pinky {-P --show}        [opcije]"
+msgid "    tsuki {-P --show}        [options]"
+msgstr "    tsuki {-P --show}        [opcije]"
 
 #: src/help.rs:22
-msgid "    pinky {-G --getpkgbuild} [package(s)]"
-msgstr "    pinky {-G --getpkgbuild} [paket(i)]"
+msgid "    tsuki {-G --getpkgbuild} [package(s)]"
+msgstr "    tsuki {-G --getpkgbuild} [paket(i)]"
 
 #: src/help.rs:23
 #, fuzzy
-msgid "    pinky {-B --build}       [dir(s)]"
-msgstr "    pinky {-P --show}        [opcije]"
+msgid "    tsuki {-B --build}       [dir(s)]"
+msgstr "    tsuki {-P --show}        [opcije]"
 
 #: src/help.rs:25
-msgid "If no arguments are provided 'pinky -Syu' will be performed"
-msgstr "Ako je pokrento bez argumenata, pokreće se 'pinky -Syu'"
+msgid "If no arguments are provided 'tsuki -Syu' will be performed"
+msgstr "Ako je pokrento bez argumenata, pokreće se 'tsuki -Syu'"
 
 #: src/help.rs:27
 msgid "Options without operation:"
@@ -440,7 +440,7 @@ msgid "    -a --aur               Assume targets are from the AUR"
 msgstr "    -a --aur               Pretpostavlja da su ciljevi iz AUR"
 
 #: src/help.rs:35
-msgid "    --mode      <mode>     Sets where pinky looks for targets"
+msgid "    --mode      <mode>     Sets where tsuki looks for targets"
 msgstr ""
 
 #: src/help.rs:37

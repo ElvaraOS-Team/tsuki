@@ -571,7 +571,7 @@ impl Ini for Config {
             CallbackKind::Directive(_, key, value) => self.parse_directive(key, value),
         };
 
-        let filename = cb.filename.unwrap_or("pinky.conf");
+        let filename = cb.filename.unwrap_or("tsuki.conf");
         err.map_err(|e| anyhow!("{}:{}: {}", filename, cb.line_number, e))
     }
 }
@@ -580,20 +580,20 @@ impl Config {
     pub fn new() -> Result<Self> {
         let cache =
             dirs::cache_dir().ok_or_else(|| anyhow!(tr!("failed to find cache directory")))?;
-        let cache = cache.join("pinky");
+        let cache = cache.join("tsuki");
         let config =
             dirs::config_dir().ok_or_else(|| anyhow!(tr!("failed to find config directory")))?;
-        let config = config.join("pinky");
+        let config = config.join("tsuki");
         let state = dirs::state_dir()
             .or_else(dirs::cache_dir)
             .ok_or_else(|| anyhow!(tr!("failed to find state directory")))?;
-        let state = state.join("pinky");
+        let state = state.join("tsuki");
 
         let build_dir = cache.join("clone");
         let old_old_devel_path = cache.join("devel.json");
         let old_devel_path = state.join("devel.json");
         let devel_path = state.join("devel.toml");
-        let config_path = config.join("pinky.conf");
+        let config_path = config.join("tsuki.conf");
 
         let old = if old_devel_path.exists() {
             Some(&old_devel_path)
@@ -629,7 +629,7 @@ impl Config {
             }
         }
 
-        if let Ok(conf) = var("PINKY_CONF") {
+        if let Ok(conf) = var("TSUKI_CONF") {
             let path = PathBuf::from(conf);
             ensure!(
                 path.exists(),
@@ -639,7 +639,7 @@ impl Config {
         } else if config_path.exists() {
             config.config_path = Some(config_path);
         } else {
-            let config_path = PathBuf::from("/etc/pinky.conf");
+            let config_path = PathBuf::from("/etc/tsuki.conf");
 
             if config_path.exists() {
                 config.config_path = Some(config_path);
@@ -728,10 +728,10 @@ impl Config {
         {
             use std::time::Duration;
 
-            let ver = option_env!("PINKY_VERSION").unwrap_or(env!("CARGO_PKG_VERSION"));
+            let ver = option_env!("TSUKI_VERSION").unwrap_or(env!("CARGO_PKG_VERSION"));
             let client = reqwest::Client::builder()
                 .tcp_keepalive(Duration::new(15, 0))
-                .user_agent(format!("pinky/{}", ver))
+                .user_agent(format!("tsuki/{}", ver))
                 .build()?;
 
             let rpc_url = match &self.aur_rpc_url {
@@ -812,7 +812,7 @@ impl Config {
     Server = file:///var/lib/repo/aur
 
 then initialise it with:
-    pinky -Ly"
+    tsuki -Ly"
                 );
             }
 
@@ -1170,8 +1170,8 @@ then initialise it with:
 }
 
 pub fn version() {
-    let ver = option_env!("PINKY_VERSION").unwrap_or(env!("CARGO_PKG_VERSION"));
-    print!("pinky v{}", ver);
+    let ver = option_env!("TSUKI_VERSION").unwrap_or(env!("CARGO_PKG_VERSION"));
+    print!("tsuki v{}", ver);
     #[cfg(feature = "git")]
     print!(" +git");
     println!(" - libalpm v{}", alpm::version());

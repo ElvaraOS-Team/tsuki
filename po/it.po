@@ -1,11 +1,11 @@
-# Translation of pinky into Italian.
-# This file is distributed under the same license as the pinky package.
+# Translation of tsuki into Italian.
+# This file is distributed under the same license as the tsuki package.
 # Francesco Minnocci <ascoli@minnocci>, 2021.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: pinky 1.7.3\n"
-"Report-Msgid-Bugs-To: https://github.com/ElvaraOS-Team/pinky\n"
+"Project-Id-Version: tsuki 1.7.3\n"
+"Report-Msgid-Bugs-To: https://github.com/ElvaraOS-Team/tsuki\n"
 "POT-Creation-Date: 2026-01-08 17:40+0000\n"
 "PO-Revision-Date: 2021-06-28 19:00+0000\n"
 "Last-Translator: Francesco Minnocci <ascoli dot minnocci at gmail dot com>\n"
@@ -335,15 +335,15 @@ msgid "Usage:"
 msgstr ""
 
 #: src/help.rs:5
-msgid "    pinky"
+msgid "    tsuki"
 msgstr ""
 
 #: src/help.rs:6
-msgid "    pinky <operation> [...]"
+msgid "    tsuki <operation> [...]"
 msgstr ""
 
 #: src/help.rs:7
-msgid "    pinky <package(s)>"
+msgid "    tsuki <package(s)>"
 msgstr ""
 
 #: src/help.rs:9
@@ -351,39 +351,39 @@ msgid "Pacman operations:"
 msgstr ""
 
 #: src/help.rs:10
-msgid "    pinky {-h --help}"
+msgid "    tsuki {-h --help}"
 msgstr ""
 
 #: src/help.rs:11
-msgid "    pinky {-V --version}"
+msgid "    tsuki {-V --version}"
 msgstr ""
 
 #: src/help.rs:12
-msgid "    pinky {-D --database}    <options> <package(s)>"
+msgid "    tsuki {-D --database}    <options> <package(s)>"
 msgstr ""
 
 #: src/help.rs:13
-msgid "    pinky {-F --files}       [options] [package(s)]"
+msgid "    tsuki {-F --files}       [options] [package(s)]"
 msgstr ""
 
 #: src/help.rs:14
-msgid "    pinky {-Q --query}       [options] [package(s)]"
+msgid "    tsuki {-Q --query}       [options] [package(s)]"
 msgstr ""
 
 #: src/help.rs:15
-msgid "    pinky {-R --remove}      [options] <package(s)>"
+msgid "    tsuki {-R --remove}      [options] <package(s)>"
 msgstr ""
 
 #: src/help.rs:16
-msgid "    pinky {-S --sync}        [options] [package(s)]"
+msgid "    tsuki {-S --sync}        [options] [package(s)]"
 msgstr ""
 
 #: src/help.rs:17
-msgid "    pinky {-T --deptest}     [options] [package(s)]"
+msgid "    tsuki {-T --deptest}     [options] [package(s)]"
 msgstr ""
 
 #: src/help.rs:18
-msgid "    pinky {-U --upgrade}     [options] [file(s)]"
+msgid "    tsuki {-U --upgrade}     [options] [file(s)]"
 msgstr ""
 
 #: src/help.rs:20
@@ -391,19 +391,19 @@ msgid "New operations:"
 msgstr ""
 
 #: src/help.rs:21
-msgid "    pinky {-P --show}        [options]"
+msgid "    tsuki {-P --show}        [options]"
 msgstr ""
 
 #: src/help.rs:22
-msgid "    pinky {-G --getpkgbuild} [package(s)]"
+msgid "    tsuki {-G --getpkgbuild} [package(s)]"
 msgstr ""
 
 #: src/help.rs:23
-msgid "    pinky {-B --build}       [dir(s)]"
+msgid "    tsuki {-B --build}       [dir(s)]"
 msgstr ""
 
 #: src/help.rs:25
-msgid "If no arguments are provided 'pinky -Syu' will be performed"
+msgid "If no arguments are provided 'tsuki -Syu' will be performed"
 msgstr ""
 
 #: src/help.rs:27
@@ -437,7 +437,7 @@ msgid "    -a --aur               Assume targets are from the AUR"
 msgstr ""
 
 #: src/help.rs:35
-msgid "    --mode      <mode>     Sets where pinky looks for targets"
+msgid "    --mode      <mode>     Sets where tsuki looks for targets"
 msgstr ""
 
 #: src/help.rs:37

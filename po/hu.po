@@ -1,12 +1,12 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE pinky'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the pinky package.
+# Copyright (C) YEAR THE tsuki'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the tsuki package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: pinky  2.0.0\n"
-"Report-Msgid-Bugs-To: https://github.com/ElvaraOS-Team/pinky\n"
+"Project-Id-Version: tsuki  2.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/ElvaraOS-Team/tsuki\n"
 "POT-Creation-Date: 2026-01-08 17:40+0000\n"
 "PO-Revision-Date: 2026-01-08 20:01+0100\n"
 "Last-Translator: summoner <summoner@disroot.org>\n"
@@ -324,76 +324,76 @@ msgid "Usage:"
 msgstr "Használat:"
 
 #: src/help.rs:5
-msgid "    pinky"
-msgstr "    pinky"
+msgid "    tsuki"
+msgstr "    tsuki"
 
 #: src/help.rs:6
-msgid "    pinky <operation> [...]"
-msgstr "    pinky <művelet> [...]"
+msgid "    tsuki <operation> [...]"
+msgstr "    tsuki <művelet> [...]"
 
 #: src/help.rs:7
-msgid "    pinky <package(s)>"
-msgstr "    pinky <csomag(ok)>"
+msgid "    tsuki <package(s)>"
+msgstr "    tsuki <csomag(ok)>"
 
 #: src/help.rs:9
 msgid "Pacman operations:"
 msgstr "Pacman műveletek:"
 
 #: src/help.rs:10
-msgid "    pinky {-h --help}"
-msgstr "    pinky {-h --help}"
+msgid "    tsuki {-h --help}"
+msgstr "    tsuki {-h --help}"
 
 #: src/help.rs:11
-msgid "    pinky {-V --version}"
-msgstr "    pinky {-V --version}"
+msgid "    tsuki {-V --version}"
+msgstr "    tsuki {-V --version}"
 
 #: src/help.rs:12
-msgid "    pinky {-D --database}    <options> <package(s)>"
-msgstr "    pinky {-D --database}    <kapcsolók> <csomag(ok)>"
+msgid "    tsuki {-D --database}    <options> <package(s)>"
+msgstr "    tsuki {-D --database}    <kapcsolók> <csomag(ok)>"
 
 #: src/help.rs:13
-msgid "    pinky {-F --files}       [options] [package(s)]"
-msgstr "    pinky {-F --files}       [kapcsolók] [csomag(ok)]"
+msgid "    tsuki {-F --files}       [options] [package(s)]"
+msgstr "    tsuki {-F --files}       [kapcsolók] [csomag(ok)]"
 
 #: src/help.rs:14
-msgid "    pinky {-Q --query}       [options] [package(s)]"
-msgstr "    pinky {-Q --query}       [kapcsolók] [csomag(ok)]"
+msgid "    tsuki {-Q --query}       [options] [package(s)]"
+msgstr "    tsuki {-Q --query}       [kapcsolók] [csomag(ok)]"
 
 #: src/help.rs:15
-msgid "    pinky {-R --remove}      [options] <package(s)>"
-msgstr "    pinky {-R --remove}      [kapcsolók] <csomag(ok)>"
+msgid "    tsuki {-R --remove}      [options] <package(s)>"
+msgstr "    tsuki {-R --remove}      [kapcsolók] <csomag(ok)>"
 
 #: src/help.rs:16
-msgid "    pinky {-S --sync}        [options] [package(s)]"
-msgstr "    pinky {-S --sync}        [kapcsolók] [csomag(ok)]"
+msgid "    tsuki {-S --sync}        [options] [package(s)]"
+msgstr "    tsuki {-S --sync}        [kapcsolók] [csomag(ok)]"
 
 #: src/help.rs:17
-msgid "    pinky {-T --deptest}     [options] [package(s)]"
-msgstr "    pinky {-T --deptest}     [kapcsolók] [csomag(ok)]"
+msgid "    tsuki {-T --deptest}     [options] [package(s)]"
+msgstr "    tsuki {-T --deptest}     [kapcsolók] [csomag(ok)]"
 
 #: src/help.rs:18
-msgid "    pinky {-U --upgrade}     [options] [file(s)]"
-msgstr "    pinky {-U --upgrade}     [kapcsolók] [fájl(ok)]"
+msgid "    tsuki {-U --upgrade}     [options] [file(s)]"
+msgstr "    tsuki {-U --upgrade}     [kapcsolók] [fájl(ok)]"
 
 #: src/help.rs:20
 msgid "New operations:"
 msgstr "Új műveletek:"
 
 #: src/help.rs:21
-msgid "    pinky {-P --show}        [options]"
-msgstr "    pinky {-P --show}        [kapcsolók]"
+msgid "    tsuki {-P --show}        [options]"
+msgstr "    tsuki {-P --show}        [kapcsolók]"
 
 #: src/help.rs:22
-msgid "    pinky {-G --getpkgbuild} [package(s)]"
-msgstr "    pinky {-G --getpkgbuild} [csomag(ok)]"
+msgid "    tsuki {-G --getpkgbuild} [package(s)]"
+msgstr "    tsuki {-G --getpkgbuild} [csomag(ok)]"
 
 #: src/help.rs:23
-msgid "    pinky {-B --build}       [dir(s)]"
-msgstr "    pinky {-B --build}       [könyvtár(ak)]"
+msgid "    tsuki {-B --build}       [dir(s)]"
+msgstr "    tsuki {-B --build}       [könyvtár(ak)]"
 
 #: src/help.rs:25
-msgid "If no arguments are provided 'pinky -Syu' will be performed"
-msgstr "Ha nem kap argumentumokat, akkor a „pinky -Syu” parancsot hajtja végre"
+msgid "If no arguments are provided 'tsuki -Syu' will be performed"
+msgstr "Ha nem kap argumentumokat, akkor a „tsuki -Syu” parancsot hajtja végre"
 
 #: src/help.rs:27
 msgid "Options without operation:"
@@ -433,8 +433,8 @@ msgstr ""
 "    -a --aur               Feltételezve, hogy minden cél az AUR-ból származik"
 
 #: src/help.rs:35
-msgid "    --mode      <mode>     Sets where pinky looks for targets"
-msgstr "    --mode      <mode>     Beállítja, hogy a pinky hol keressen célokat"
+msgid "    --mode      <mode>     Sets where tsuki looks for targets"
+msgstr "    --mode      <mode>     Beállítja, hogy a tsuki hol keressen célokat"
 
 #: src/help.rs:37
 msgid ""

@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 ### Affected Version
-**pinky -V**
+**tsuki -V**
 
 ### Description
 **Have you checked previous issues?**
@@ -18,7 +18,7 @@ assignees: ''
 
 **Don't cut parts of the input always include the FULL thing**
 
-**pinky.conf and pacman.conf are usually always relevant**
+**tsuki.conf and pacman.conf are usually always relevant**
 
 ```sh
 

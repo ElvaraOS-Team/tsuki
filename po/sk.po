@@ -1,12 +1,12 @@
-# Slovak translation of pinky.
-# Copyright (C) YEAR THE pinky'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the pinky package.
+# Slovak translation of tsuki.
+# Copyright (C) YEAR THE tsuki'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the tsuki package.
 # Jose Riha <jose1711@gmail.com>, 2024.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: pinky  2.0.0\n"
-"Report-Msgid-Bugs-To: https://github.com/ElvaraOS-Team/pinky\n"
+"Project-Id-Version: tsuki  2.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/ElvaraOS-Team/tsuki\n"
 "POT-Creation-Date: 2026-01-08 17:40+0000\n"
 "PO-Revision-Date: 2024-10-14 13:14+0200\n"
 "Last-Translator: Jose Riha <jose1711@gmail.com>\n"
@@ -322,76 +322,76 @@ msgid "Usage:"
 msgstr "Použitie:"
 
 #: src/help.rs:5
-msgid "    pinky"
-msgstr "    pinky"
+msgid "    tsuki"
+msgstr "    tsuki"
 
 #: src/help.rs:6
-msgid "    pinky <operation> [...]"
-msgstr "    pinky <operácia> [...]"
+msgid "    tsuki <operation> [...]"
+msgstr "    tsuki <operácia> [...]"
 
 #: src/help.rs:7
-msgid "    pinky <package(s)>"
-msgstr "    pinky <balíček(y)>"
+msgid "    tsuki <package(s)>"
+msgstr "    tsuki <balíček(y)>"
 
 #: src/help.rs:9
 msgid "Pacman operations:"
 msgstr "Pacman operácie:"
 
 #: src/help.rs:10
-msgid "    pinky {-h --help}"
-msgstr "    pinky {-h --help}"
+msgid "    tsuki {-h --help}"
+msgstr "    tsuki {-h --help}"
 
 #: src/help.rs:11
-msgid "    pinky {-V --version}"
-msgstr "    pinky {-V --version}"
+msgid "    tsuki {-V --version}"
+msgstr "    tsuki {-V --version}"
 
 #: src/help.rs:12
-msgid "    pinky {-D --database}    <options> <package(s)>"
-msgstr "    pinky {-D --database}    <voľby> <balíček(y)>"
+msgid "    tsuki {-D --database}    <options> <package(s)>"
+msgstr "    tsuki {-D --database}    <voľby> <balíček(y)>"
 
 #: src/help.rs:13
-msgid "    pinky {-F --files}       [options] [package(s)]"
-msgstr "    pinky {-F --files}       [voľby] [balíček(y)]"
+msgid "    tsuki {-F --files}       [options] [package(s)]"
+msgstr "    tsuki {-F --files}       [voľby] [balíček(y)]"
 
 #: src/help.rs:14
-msgid "    pinky {-Q --query}       [options] [package(s)]"
-msgstr "    pinky {-Q --query}       [voľby] [balíček(y)]"
+msgid "    tsuki {-Q --query}       [options] [package(s)]"
+msgstr "    tsuki {-Q --query}       [voľby] [balíček(y)]"
 
 #: src/help.rs:15
-msgid "    pinky {-R --remove}      [options] <package(s)>"
-msgstr "    pinky {-R --remove}      [voľby] <balíček(y)>"
+msgid "    tsuki {-R --remove}      [options] <package(s)>"
+msgstr "    tsuki {-R --remove}      [voľby] <balíček(y)>"
 
 #: src/help.rs:16
-msgid "    pinky {-S --sync}        [options] [package(s)]"
-msgstr "    pinky {-S --sync}        [voľby] [balíček(y)]"
+msgid "    tsuki {-S --sync}        [options] [package(s)]"
+msgstr "    tsuki {-S --sync}        [voľby] [balíček(y)]"
 
 #: src/help.rs:17
-msgid "    pinky {-T --deptest}     [options] [package(s)]"
-msgstr "    pinky {-T --deptest}     [voľby] [balíček(y)]"
+msgid "    tsuki {-T --deptest}     [options] [package(s)]"
+msgstr "    tsuki {-T --deptest}     [voľby] [balíček(y)]"
 
 #: src/help.rs:18
-msgid "    pinky {-U --upgrade}     [options] [file(s)]"
-msgstr "   pinky {-U --upgrade}     [voľby] [súbor(y)]"
+msgid "    tsuki {-U --upgrade}     [options] [file(s)]"
+msgstr "   tsuki {-U --upgrade}     [voľby] [súbor(y)]"
 
 #: src/help.rs:20
 msgid "New operations:"
 msgstr "Nové operácie:"
 
 #: src/help.rs:21
-msgid "    pinky {-P --show}        [options]"
-msgstr "    pinky {-P --show}        [voľby]"
+msgid "    tsuki {-P --show}        [options]"
+msgstr "    tsuki {-P --show}        [voľby]"
 
 #: src/help.rs:22
-msgid "    pinky {-G --getpkgbuild} [package(s)]"
-msgstr "    pinky {-G --getpkgbuild} [balíček(y)]"
+msgid "    tsuki {-G --getpkgbuild} [package(s)]"
+msgstr "    tsuki {-G --getpkgbuild} [balíček(y)]"
 
 #: src/help.rs:23
-msgid "    pinky {-B --build}       [dir(s)]"
-msgstr "    pinky {-B --build}       [adresár(e)]"
+msgid "    tsuki {-B --build}       [dir(s)]"
+msgstr "    tsuki {-B --build}       [adresár(e)]"
 
 #: src/help.rs:25
-msgid "If no arguments are provided 'pinky -Syu' will be performed"
-msgstr "Ak nie sú zadané argumenty, vykoná sa 'pinky -Syu'"
+msgid "If no arguments are provided 'tsuki -Syu' will be performed"
+msgstr "Ak nie sú zadané argumenty, vykoná sa 'tsuki -Syu'"
 
 #: src/help.rs:27
 msgid "Options without operation:"
@@ -429,8 +429,8 @@ msgid "    -a --aur               Assume targets are from the AUR"
 msgstr "    -a --aur               Predpokladať, že ciele pochádzajú z AUR"
 
 #: src/help.rs:35
-msgid "    --mode      <mode>     Sets where pinky looks for targets"
-msgstr "    --mode      <režim>   Nastaviť, kde bude pinky hľadať ciele"
+msgid "    --mode      <mode>     Sets where tsuki looks for targets"
+msgstr "    --mode      <režim>   Nastaviť, kde bude tsuki hľadať ciele"
 
 #: src/help.rs:37
 msgid ""

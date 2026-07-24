@@ -2,27 +2,27 @@ use crate::printtr;
 
 pub fn help() {
     printtr!("Usage:");
-    printtr!("    pinky");
-    printtr!("    pinky <operation> [...]");
-    printtr!("    pinky <package(s)>");
+    printtr!("    tsuki");
+    printtr!("    tsuki <operation> [...]");
+    printtr!("    tsuki <package(s)>");
     println!();
     printtr!("Pacman operations:");
-    printtr!("    pinky {-h --help}");
-    printtr!("    pinky {-V --version}");
-    printtr!("    pinky {-D --database}    <options> <package(s)>");
-    printtr!("    pinky {-F --files}       [options] [package(s)]");
-    printtr!("    pinky {-Q --query}       [options] [package(s)]");
-    printtr!("    pinky {-R --remove}      [options] <package(s)>");
-    printtr!("    pinky {-S --sync}        [options] [package(s)]");
-    printtr!("    pinky {-T --deptest}     [options] [package(s)]");
-    printtr!("    pinky {-U --upgrade}     [options] [file(s)]");
+    printtr!("    tsuki {-h --help}");
+    printtr!("    tsuki {-V --version}");
+    printtr!("    tsuki {-D --database}    <options> <package(s)>");
+    printtr!("    tsuki {-F --files}       [options] [package(s)]");
+    printtr!("    tsuki {-Q --query}       [options] [package(s)]");
+    printtr!("    tsuki {-R --remove}      [options] <package(s)>");
+    printtr!("    tsuki {-S --sync}        [options] [package(s)]");
+    printtr!("    tsuki {-T --deptest}     [options] [package(s)]");
+    printtr!("    tsuki {-U --upgrade}     [options] [file(s)]");
     println!();
     printtr!("New operations:");
-    printtr!("    pinky {-P --show}        [options]");
-    printtr!("    pinky {-G --getpkgbuild} [package(s)]");
-    printtr!("    pinky {-B --build}       [dir(s)]");
+    printtr!("    tsuki {-P --show}        [options]");
+    printtr!("    tsuki {-G --getpkgbuild} [package(s)]");
+    printtr!("    tsuki {-B --build}       [dir(s)]");
     println!();
-    printtr!("If no arguments are provided 'pinky -Syu' will be performed");
+    printtr!("If no arguments are provided 'tsuki -Syu' will be performed");
     println!();
     printtr!("Options without operation:");
     printtr!("    -c --clean            Remove unneeded dependencies");
@@ -32,7 +32,7 @@ pub fn help() {
     printtr!("       --repo              Assume targets are from the repositories");
     printtr!("       --pkgbuilds         Assume targets are from pkgbuild repositories");
     printtr!("    -a --aur               Assume targets are from the AUR");
-    printtr!("    --mode      <mode>     Sets where pinky looks for targets");
+    printtr!("    --mode      <mode>     Sets where tsuki looks for targets");
     printtr!(
         "    --interactive          Enable interactive package selection for -S, -R, -Ss and -Qs"
     );
